@@ -10,7 +10,7 @@ body {
 .mainContainer {
     display: grid;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: 120px max(100vh - 120px, 100%);
+    grid-template-rows: 150px max(100vh - 120px, 100%);
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
@@ -60,12 +60,113 @@ body {
     width: 48px;
 }
 
-.needMargin {
+.needMarginBottom {
     margin-bottom: 40px;
 }
 
 .header {
     display: grid;
-    grid-template-rows: 50px 70px;
+    grid-template-rows: 50px 100px;
     grid-template-columns: 1fr;
+}
+
+.firstLine {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.searchLogo {
+    margin-left: 30px;
+    width: 24px;
+    padding-top: 5px;
+}
+
+.bellLogo {
+    width: 24px;
+    margin-left: auto;
+}
+
+.avatar {
+    width: 40px;
+}
+
+.firstLine span {
+    margin-right: 30px;
+    font-weight: 500;
+}
+
+.firstLine input[type=text] {
+    background-color: #eee;
+    border-radius: 10px;
+    border: 0;
+    height: 24px;
+    flex: 1;
+    margin-right: min(100px, 10%);
+}
+
+.firstLine .searchLine {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.firstLine a {
+    text-decoration: none;
+    color: black;
+}
+
+.secondLine {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.secondLine button {
+    border: 0;
+    background-color: #1992D3;
+    color: white;
+    height: 40px;
+    width: 90px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.secondLine button:hover {
+    cursor: pointer;
+}
+
+.logoName {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 35px 35px;
+    grid-template-areas: "logo hello" "logo name";
+    gap: 5px 20px;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logoName img {
+    width: 100%;
+    grid-area: logo;
+}
+
+.logoName > .hello {
+    align-self: end;
+    font-weight: 500;
+}
+
+.logoName > .name {
+    align-self: start;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.secondLine button:last-child {
+    margin-right: 30px;
+}
+
+.secondLine > :first-child {
+    margin-left: 30px;
 }
