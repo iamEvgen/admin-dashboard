@@ -19,15 +19,19 @@ body {
 .sidebar {
     grid-area: sidebar;
     background-color: #1992D3;
+    z-index: 4;
 }
 
 .header {
     grid-area: header;
     box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 20%);
+    z-index: 3;
 }
 
 .content {
     grid-area: content;
+    background-color: #eee;
+    z-index: 2;
 }
 
 .nav {
@@ -169,4 +173,57 @@ body {
 
 .secondLine > :first-child {
     margin-left: 30px;
+}
+
+.contentBox {
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "mainContent trends";
+}
+
+.mainContent {
+    grid-area: mainContent;
+}
+
+.trends {
+    grid-area: trends;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: -7px 0px orange, 3px 3px 10px 0px rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-size: 1.2rem;
+}
+
+.card .cardIcons {
+    justify-content: end;
+    align-items: end;
+    display: flex;
+    gap: 24px;
+    margin-top: auto;
+}
+
+.cardIcons img {
+    width: 24px;
+}
+
+.card p {
+    color: #676767;
 }
